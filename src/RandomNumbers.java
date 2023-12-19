@@ -7,24 +7,15 @@ class RandomNumbers extends Thread
         {
             Random rd=new Random();
             int randomInteger=rd.nextInt(100);
-            System.out.println("Randm Number generated:
-                    "+randomInteger);
+            System.out.println("Random Number generated: "+randomInteger);
             if((randomInteger%2)==0)
             {
-                SquareThread sThread=new
-                        SquareThread(randomInteger);
+                SquareThread sThread=new SquareThread(randomInteger);
                 sThread.start();
             }
-
-            09-02-2022
-
-            27
-
-            27
-
 else
             {
-                CubeThread cThread=newCubeThread(randomInteger);
+                CubeThread cThread=new CubeThread(randomInteger);
                 cThread.start();
             }
             try
@@ -47,26 +38,19 @@ class SquareThread extends Thread
     }
     public void run()
     {
-        System.out.println("Square of "+number+"=
-                "+(number*number));
+        System.out.println("Square of "+number+"= "+(number*number));
     }
 }
 class CubeThread extends Thread
 {
     int number;
-
-28
-
-        28
-
     CubeThread(int randomNumbern)
     {
         number=randomNumbern;
     }
     public void run()
     {
-        System.out.println("Cube of "+number+"=
-                "+(number*number*number));
+        System.out.println("Cube of "+number+"= "+(number*number*number));
     }
 }
 class MultipleThreads
@@ -77,3 +61,23 @@ class MultipleThreads
         rn.start();
     }
 }
+/*Random Number generated: 76
+Square of 76= 5776
+Random Number generated: 86
+Square of 86= 7396
+Random Number generated: 46
+Square of 46= 2116
+Random Number generated: 87
+Cube of 87= 658503
+Random Number generated: 56
+Square of 56= 3136
+Random Number generated: 57
+Cube of 57= 185193
+Random Number generated: 76
+Square of 76= 5776
+Random Number generated: 80
+Square of 80= 6400
+Random Number generated: 2
+Square of 2= 4
+Random Number generated: 43
+Cube of 43= 79507*/
